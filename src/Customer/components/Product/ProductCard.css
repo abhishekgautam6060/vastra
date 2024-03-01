@@ -1,0 +1,14 @@
+.productCard.textPart{
+    transition:  transform .3s ease-out;
+
+}
+/* agar card par koi hover krega to text uper ki tarf jayega islye
+apan ne -1rem diya h jise uper jaye Y direction m  */
+.productCard:hover .textPart{
+    transform: translateY(-1rem);
+}
+
+.productCard:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 54px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px
+}
