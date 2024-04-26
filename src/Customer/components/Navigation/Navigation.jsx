@@ -12,10 +12,10 @@
   }
   ```
 */
-import { Fragment, useEffect, useState } from "react";
 import { Dialog, Popover, Tab, Transition } from "@headlessui/react";
-import { deepPurple } from "@mui/material/colors";
 import { Avatar, Button, Menu, MenuItem } from "@mui/material";
+import { deepPurple } from "@mui/material/colors";
+import { Fragment, useEffect, useState } from "react";
 
 import {
   Bars3Icon,
@@ -23,11 +23,11 @@ import {
   ShoppingBagIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
-import { navigation } from "./navigationData";
-import { useLocation, useNavigate } from "react-router-dom";
-import AuthModal from "../../Auth/AuthModal";
 import { useDispatch, useSelector } from "react-redux";
+import { useLocation, useNavigate } from "react-router-dom";
 import { getUser, logout } from "../../../Store/Auth/Action";
+import AuthModal from "../../Auth/AuthModal";
+import { navigation } from "./navigationData";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -227,7 +227,7 @@ export default function Navigation() {
 
                 <div className="space-y-6 border-t border-gray-200 px-4 py-6">
                   <div className="flow-root">
-                    <a
+                    <a onClick={handleOpen}
                       href="#"
                       className="-m-2 block p-2 font-medium text-gray-900"
                     >
@@ -235,12 +235,12 @@ export default function Navigation() {
                     </a>
                   </div>
                   <div className="flow-root">
-                    <a
-                      href="#"
-                      className="-m-2 block p-2 font-medium text-gray-900"
+                  <Button
+                      onClick={handleOpen}
+                      className="text-sm font-medium text-gray-700 hover:text-gray-800"
                     >
-                      Create account
-                    </a>
+                      Create Account
+                    </Button>
                   </div>
                 </div>
 
