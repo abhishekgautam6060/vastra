@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const API_BASE_URL = "localhost:8084/auth";
+export const API_BASE_URL = "http://localhost:8084/auth";
 
 const jwt = localStorage.getItem("jwt");
 
